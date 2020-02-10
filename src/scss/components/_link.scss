@@ -1,0 +1,23 @@
+.link {
+  padding: $offset-2;
+  color: inherit;
+  background-image: linear-gradient(
+      to bottom,
+      transparent 0%,
+      transparent 45%,
+      $color-base-100 45%,
+    );
+    transition: all $time-200 ease-out;
+
+  &:link{
+    display: inline;
+    text-decoration: none;
+    background-position: 0 0;
+    background-size: 100% 200%;
+  }
+
+  &:hover{
+    background-position: 0 100%;
+    color: $color-darkest;
+  }
+}

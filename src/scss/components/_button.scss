@@ -1,0 +1,44 @@
+.button{
+  position: relative;
+  top: 0; left: 0;
+  padding: $size-02 $size-07;
+  font-size: $size-font-300;
+
+  &::before{
+    @include background-block(-2);
+    border-bottom: 2px solid currentColor;
+    border-left: 2px solid currentColor;
+    transform: translate(-$offset-4, $offset-4);
+    transition: transform $time-100 ease-out;
+  }
+
+  &::after{
+    @include background-block(-1);
+    border-top: 2px solid currentColor;
+    border-right: 2px solid currentColor;
+    transform: translate($offset-4, -$offset-4);
+    transition: transform $time-100 ease-out;
+  }
+
+  &:hover{
+    &::before{
+      transform: translate(0, 0);
+    }
+    &::after{
+      transform: translate(0, 0);
+    }
+  }
+
+  &--primary{
+    font-weight: 700;
+
+    &::before{
+      background-color: $color-base-600;
+      border: none;
+    }
+  
+    &::after{
+      border: 2px solid currentColor;
+    }
+  }
+}
