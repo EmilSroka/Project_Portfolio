@@ -1,22 +1,28 @@
 .link {
-  padding: $offset-2;
+  padding: $offset-4;
   color: inherit;
   background-image: linear-gradient(
-      to bottom,
-      transparent 0%,
-      transparent 45%,
-      $color-base-100 45%,
-    );
-    transition: all $time-200 ease-out;
+                      to bottom,
+                      transparent 0%,
+                      transparent 30%,
+                      $color-base-600 30%,
+                      $color-base-600 66.6%,
+                      $color-base-100 66.7%
+                    );
+  transition: all $time-100 ease-out;
 
   &:link{
     display: inline;
     text-decoration: none;
     background-position: 0 0;
-    background-size: 100% 200%;
+    background-size: 100% 300%;
   }
 
   &:hover{
+    background-position: 0 50%;
+  }
+
+  &:active{
     background-position: 0 100%;
     color: $color-darkest;
   }

@@ -1,26 +1,37 @@
 .button{
   position: relative;
   top: 0; left: 0;
+  z-index: 1;
   padding: $size-02 $size-07;
   font-size: $size-font-300;
+  cursor: pointer;
 
   &::before{
-    @include background-block(-2);
+    @include background-pseudoelement(-2);
     border-bottom: 2px solid currentColor;
     border-left: 2px solid currentColor;
-    transform: translate(-$offset-4, $offset-4);
+    transform: translate(-$offset-3, $offset-3);
     transition: transform $time-100 ease-out;
   }
 
   &::after{
-    @include background-block(-1);
+    @include background-pseudoelement(-1);
     border-top: 2px solid currentColor;
     border-right: 2px solid currentColor;
-    transform: translate($offset-4, -$offset-4);
+    transform: translate($offset-3, -$offset-3);
     transition: transform $time-100 ease-out;
   }
 
   &:hover{
+    &::before{
+      transform: translate($offset-3, -$offset-3);
+    }
+    &::after{
+      transform: translate(-$offset-3, $offset-3);
+    }
+  }
+
+  &:active{
     &::before{
       transform: translate(0, 0);
     }

@@ -1,9 +1,13 @@
-@mixin background-block($z-index) {
+@mixin absolute-pseudoelement($z-index) {
   content: "";
   display: block;
   position: absolute;
-  top: 0; left: 0;
   z-index: $z-index;
+}
+
+@mixin background-pseudoelement($z-index) {
+  @include absolute-pseudoelement($z-index);
+  top: 0; left: 0;
   width: 100%;
   height: 100%;
 }
