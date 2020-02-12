@@ -1,0 +1,26 @@
+.header{
+  background-color: $color-darkest;
+  padding: $size-13 $size-06 $size-11 $size-06;
+}
+
+.header__icons{
+  height: $size-13;
+  margin-top: $size-04;
+  display: flex;
+}
+
+.header__icons .icon-link{
+  margin-right: $size-06;
+}
+
+.header__cta{
+  margin-top: $size-10;
+  position: relative;
+  left: 50%;
+  transform: translate(-50%);
+
+  & svg{
+    width: $size-07;
+    height: $size-07;
+  }
+}

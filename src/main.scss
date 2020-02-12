@@ -3,6 +3,10 @@
 
 @import './scss/base/normalize';
 @import './scss/base/typography';
+@import './scss/base/a11y';
 
 @import './scss/components/button';
-@import './scss/components/link'
+@import './scss/components/link';
+@import './scss/components/heading';
+
+@import './scss/layout/header'

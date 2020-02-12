@@ -1,4 +1,10 @@
 body {
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Lato', sans-serif;
   color: $color-lightest;
+  font-size: $size-05;
+}
+
+P {
+  margin: 0;
+  line-height: 1.5;
 }

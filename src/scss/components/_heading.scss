@@ -1,0 +1,21 @@
+.primary-heading{
+  display: inline-block;
+  position: relative;
+  z-index: 1;
+  top: 0; left: 0;
+  margin: $size-04 $size-01;
+  font-size: $size-font-600;
+  letter-spacing: $offset-1;
+ 
+  &::before{
+    @include absolute-pseudoelement(-1);
+    top: -20%; left: -5%;
+    background-color: $color-base-600;
+    width: 20%;
+    height: 90%;
+  }
+
+  @media screen and (min-width: $breakpoint-medium) {
+    font-size: $size-font-700;
+  }
+}

@@ -39,7 +39,9 @@ $size-font-200: $size-04;
 $size-font-300: $size-05;
 $size-font-400: $size-06;
 $size-font-500: $size-08;
-$size-font-600: $size-10;
+$size-font-600: $size-09;
+$size-font-700: $size-10;
+$size-font-800: $size-11;
 
 $offset-1: 1px;
 $offset-2: 2px;
@@ -49,3 +51,7 @@ $offset-5: 5px;
 
 $time-100: .1s;
 $time-200: .2s;
+$time-300: .5s;
+
+$breakpoint-medium: 48em; 
+$breakpoint-large: 62em;

@@ -2,8 +2,31 @@
 <html>
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Title</title>
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,900&display=swap&subset=latin-ext" rel="stylesheet">
   </head>
   <body>
+    <header class="header">
+      <button role="button" id="visible-focus" class="button">Włącz widoczny focus</button>
+      <div class="header__introduction">
+        <h1 class="primary-heading">Cześć, jestem Emil.</h1>
+        <p>Lorem, ipsum dolor <a href="" class="link">sit amet consectetur adipisicing elit </a>. Mollitia, voluptatibus dolore sit voluptatum consequuntur esse ullam ipsum eos dignissimos doloribus itaque dolores obcaecati veniam nemo, animi, quod sint assumenda aut libero repellat eius officiis quo! Voluptatibus quo delectus laudantium, reiciendis unde blanditiis maiores omnis dolorum! Earum sed quibusdam vitae ipsa?</p>
+        <div class="header__icons">
+          <a class="icon-link" href="https://github.com/EmilSroka" title="Przejdź do Githuba">
+            <span class="visually-hidden">Przejdź do Githuba</span>
+            <img inline src="../src/assets/inline/github-brands.svg">
+          </a>
+          <a class="icon-link" href="https://pl.linkedin.com/" title="Przejdź do Linkedin">
+            <span class="visually-hidden">Przejdź do Linkedin</span>
+            <img inline src="../src/assets/inline/linkedin-brands.svg">
+          </a>
+        </div>
+      </div>
+      <button class="button button--primary header__cta">
+        Kontakt <br> 
+        <img inline src="../src/assets/inline/caret-down.svg">
+      </button>
+    </header>
   </body>
 </html>
