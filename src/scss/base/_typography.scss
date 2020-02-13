@@ -7,4 +7,16 @@ body {
 P {
   margin: 0;
   line-height: 1.5;
+  margin-bottom: $size-04;
+}
+
+ul{
+  margin: $size-02;
+  list-style: square inside;
+  padding-left: 0;
+}
+
+li{
+  line-height: 1.5;
+  margin: $size-02 0;
 }

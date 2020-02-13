@@ -35,4 +35,15 @@
       fill: $color-darkest
     }
   }
+
+  &--dark{
+    background-image: linear-gradient(
+                      to bottom,
+                      transparent 0%,
+                      transparent 30%,
+                      $color-darkest 30%,
+                      $color-darkest 66.6%,
+                      $color-base-100 66.7%
+                    );
+  }
 }
