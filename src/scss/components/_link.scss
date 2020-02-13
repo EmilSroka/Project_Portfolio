@@ -11,6 +11,11 @@
                     );
   transition: all $time-100 ease-out;
 
+  &__icon{
+    height: $size-12;
+    width: $size-12;
+  }
+
   &:link{
     display: inline;
     text-decoration: none;
@@ -25,40 +30,9 @@
   &:active{
     background-position: 0 100%;
     color: $color-darkest;
-  }
-}
 
-.icon-link{
-  height: $size-11;
-  width: $size-11;
-
-  &:link{
-    svg{
-      transition: all $time-300 ease-out;
-    }
-    path{
-      transition: all $time-300 ease-out;
-      fill: $color-base-600;
-    }
-  }
-
-  &:visited path{
-    fill: $color-base-600;
-  }
-
-  &:hover{
-    svg{
-      transition: all $time-100 ease-out;
-      background-color: $color-base-600;
-    }
-    path{
-      fill: $color-darkest;
-    }
-  }
-
-  &:active{
-    svg{
-      background-color: $color-lightest;
+    & path{
+      fill: $color-darkest
     }
   }
 }
