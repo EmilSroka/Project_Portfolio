@@ -11,3 +11,10 @@
   width: 100%;
   height: 100%;
 }
+
+@mixin background-pseudoelement-a11y($z-index, $height-offset) {
+  @include absolute-pseudoelement($z-index);
+  top: 0; left: 0;
+  width: 100%;
+  height: calc(100% - #{$height-offset}px);
+}

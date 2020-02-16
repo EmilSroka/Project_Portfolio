@@ -5,6 +5,10 @@
 .card {
   text-align: center;
 
+  &:not(:last-child){
+    margin-bottom: $size-14;
+  }
+  
   &__img{
     text-align: center;
     display: inline-block;
@@ -15,6 +19,10 @@
     font-size: $size-font-500;
     margin-top: $size-10; 
     margin-bottom: $size-02;
+
+    &--smaller-margin{
+      margin-top: $size-08; 
+    }
   }
 
   p {
