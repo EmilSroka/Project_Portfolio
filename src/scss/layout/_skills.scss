@@ -1,0 +1,25 @@
+.skills {
+  padding: $size-11 $size-06;
+
+  &__intro{
+    margin-bottom: $size-12;
+  }
+
+  .card-container{
+    margin-top: $size-10;
+  }
+
+  &__level{
+    &--basic{
+      color: $color-accent-warning;
+    }
+  
+    &--normal{
+      color: $color-base-300;
+    }
+  
+    &--advanced{
+      color: $color-accent-accept;
+    }
+  }
+}
