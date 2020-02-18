@@ -1,26 +1,67 @@
 .header{
   background-color: $color-darkest;
   padding: $size-13 $size-06 $size-11 $size-06;
-}
 
-.header__icons{
-  height: $size-13;
-  margin-top: $size-04;
-  display: flex;
-}
+  &__banner{
+    display: none;
+  }
 
-.header__icons .link{
-  margin-right: $size-06;
-}
+  &__icons{
+    height: $size-13;
+    margin-top: $size-04;
+    display: flex;
 
-.header__cta{
-  margin-top: $size-10;
-  position: relative;
-  left: 50%;
-  transform: translate(-50%);
+    & .link{
+      margin-right: $size-06;
+    }
+  }
 
-  & svg{
-    width: $size-07;
-    height: $size-07;
+  &__cta{
+    margin-top: $size-10;
+    position: relative;
+    left: 50%;
+    transform: translate(-50%);
+
+    & svg{
+      width: $size-07;
+      height: $size-07;
+    }
+  }
+
+  @media screen and (min-width: $breakpoint-medium){
+    width: 100%;
+    padding: $size-11 $size-06;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    align-items: center;
+
+    &__introduction{
+      margin: 50px 0;
+      flex: 0 1 350px;
+    }
+    
+    &__banner{
+      display: block;
+      margin: 50px 0;
+      flex: 0 1 40%;
+    }
+
+    &__cta{
+      margin: 0 20%;
+      position: static;
+      flex: 0 1 auto;
+    }
+  }
+
+  @media screen and (min-width: $breakpoint-large){
+    max-width: 1400px;
+    padding: $size-14 $size-06;
+    margin: 0 auto;
+    align-items: flex-start;
+
+    &__banner{
+      margin: 90px 0;
+    }
   }
 }
