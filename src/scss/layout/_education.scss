@@ -11,4 +11,47 @@
     width: 50vw;
     margin: 0 auto;
   }
+
+  &__content{
+    max-width: 1400px;
+    margin: 0 auto;
+
+    @media screen and (min-width: $breakpoint-medium){
+      display: grid;
+      column-gap: $size-10;
+      grid-template-columns: 280px 1fr;
+      grid-template-areas: "ed_title ed_title"
+                          "ed_logo ed_description"
+                          "ed_logo ed_syllabus"
+                          "ed_logo ed_syllabus"
+                          "ed_logo ed_projects-into"
+                          "ed_logo ed_projects";
+
+      .education__title{
+        justify-self: start;
+        grid-area: ed_title;
+      }
+
+      .education__description{
+        grid-area: ed_description;
+      }
+
+      .education__logo{
+        width: auto;
+        grid-area: ed_logo;
+      }
+
+      .education__syllabus{
+        grid-area: ed_syllabus;
+      }
+
+      .education__projects-into{
+        grid-area: ed_projects-into;
+      }
+
+      .education__projects{
+        grid-area: ed_projects;
+      }
+    }
+  }
 }

@@ -1,5 +1,11 @@
 .card-container {
   list-style: none;
+
+  @media screen and (min-width: $breakpoint-medium){
+    display: grid;
+    gap: $size-02;
+    grid-template-columns: 1fr 1fr;
+  }
 }
 
 .card {
@@ -13,6 +19,20 @@
     text-align: center;
     display: inline-block;
     max-width: 90%;
+  }
+  
+  &__title{
+    font-size: $size-font-400;
+    margin-top: $size-08; 
+    margin-bottom: $size-02;
+
+    @media screen and (min-width: $breakpoint-medium){
+      font-size: $size-font-500;
+    }
+
+    @media screen and (min-width: $breakpoint-large){
+      font-size: $size-font-600;
+    }
   }
 
   & .smaller-margin{

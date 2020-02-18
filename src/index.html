@@ -33,114 +33,116 @@
     </header>
     <main>
       <section class="projects">
-        <h2 class="primary-heading primary-heading--dark">Kilka wybranych projektów</h2>
-        <ul class="card-container">
-          <li class="card"> 
-            <a href="https://emilsroka.github.io/Project_Blog-template" class="card__img image-link image-link--before-f-tl image-link--after-br">
-              <span class="visually-hidden">Przejdź do projektu bloga</span>
-              <img 
-                alt="" 
-                src="./assets/static/Project1-min.jpg" 
-                srcset="./assets/static/Project1-min.jpg 629w, 
-                        ./assets/static/Project1-norm.jpg 1277w,
-                        ./assets/static/Project1-max.jpg 1899w"
-                sizes="(min-width: 992px) 25vw,
-                       (min-width: 768px) 40vw,
-                       80vw"
-              >
-            </a>
-            <h3 class="tertiary-heading">Szablon bloga</h3>
-            <p cass="card__description">Front-endowa część bloga wykanana w czystych językach HTML, CSS i JS. Szablon zawiera widok strony głównej oraz wpisu.</p>
-            <ul>
-              <li>
-                <a class="link link--dark" href="https://emilsroka.github.io/Project_Blog-template">Link do projektu</a>
-              </li>
-              <li>
-                <a class="link link--dark" href="https://github.com/EmilSroka/Project_Blog-template">Link do repozytorium</a>
-              </li>
-            </ul>
-          </li>
-          <!-- 2. card  -->
-          <li class="card"> 
-            <a href="https://emilsroka.github.io/Studies_Project_WDI/" class="card__img image-link image-link--after-tr">
-              <span class="visually-hidden">Przejdź do gry</span>
-              <img 
-                alt="" 
-                src="./assets/static/Project2-min.jpg" 
-                srcset="./assets/static/Project2-min.jpg 629w, 
-                        ./assets/static/Project2-norm.jpg 1277w,
-                        ./assets/static/Project2-max.jpg 1915w"
-                sizes="(min-width: 992px) 25vw,
-                       (min-width: 768px) 40vw,
-                       80vw"
-              >
-            </a>
-            <h3 class="tertiary-heading smaller-margin">Gra space invaders</h3>
-            <p cass="card__description">Gra wzorowana na space invaders wykonana w grudniu 2018 roku. Powstała jako projekt w ramach przedmiotu „Wstęp do informatki”. Projekt wykorzystuje element canvas.</p>
-            <ul>
-              <li>
-                <a class="link link--dark" href="https://emilsroka.github.io/Studies_Project_WDI/">Link do projektu</a>
-              </li>
-              <li>
-                <a class="link link--dark" href="https://github.com/EmilSroka/Studies_Project_WDI">Link do repozytorium</a>
-              </li>
-            </ul>
-          </li>
-          <!-- 3. card -->
-          <li class="card"> 
-            <a href="https://emilsroka.github.io/Exercises_Front-end/003%20masonry%20grid/my%20solution/" class="card__img image-link image-link--before-tl image-link--after-br">
-              <span class="visually-hidden">Przejdź do galerii</span>
-              <img 
-                alt="" 
-                src="./assets/static/Project3-min.jpg" 
-                srcset=" ./assets/static/Project3-min.jpg 629w, 
-                         ./assets/static/Project3-norm.jpg 1277w,
-                         ./assets/static/Project3-max.jpg 1900w"
-                sizes="(min-width: 992px) 25vw,
-                       (min-width: 768px) 40vw,
-                       80vw"
-              >
-            </a>
-            <h3 class="tertiary-heading">Galeria typu „masonry”</h3>
-            <p cass="card__description">Kod JavaScript (bez zewnętrznych bibliotek) z wykorzystaniem CSS Grid tworzy siatkę zdjęć. Strona dodatkowo pozwala powiększyć zdjęcie na pełny ekran. </p>
-            <ul>
-              <li>
-                <a class="link link--dark" href="https://emilsroka.github.io/Exercises_Front-end/003%20masonry%20grid/my%20solution/">Link do projektu</a>
-              </li>
-              <li>
-                <a class="link link--dark" href="https://github.com/EmilSroka/Exercises_Front-end">Link do repozytorium</a>
-              </li>
-            </ul>
-            <p class="card__description">Projekt znajduje się w repozytorium gromadzącego kilka mniejszych projektów powstałych podczas nauki różnych technologi.</p>
-          </li>
-          <!-- 4. card -->
-          <li class="card"> 
-            <a href="" class="card__img image-link image-link--before-f-tl image-link--after-tr">
-              <span class="visually-hidden">Przejdź do odtwarzacza.</span>
-              <img 
-                alt="" 
-                src="./assets/static/Project4-min.jpg" 
-                srcset="./assets/static/Project4-min.jpg 629w, 
-                        ./assets/static/Project4-norm.jpg 1277w,
-                        ./assets/static/Project4-max.jpg 1920w"
-                sizes="(min-width: 992px) 25vw,
-                       (min-width: 768px) 40vw,
-                       80vw"
-              >
-            </a>
-            <h3 class="tertiary-heading smaller-margin">Odtwarzacz filmów</h3>
-            <p cass="card__description">Prosty odtwarzacz filmów korzystający z elementu video. Menu korzysta z komponentu slider, zaprogramowanego na potrzeby tego projektu.</p>
-            <ul>
-              <li>
-                <a class="link link--dark" href="https://emilsroka.github.io/Course_Javascript-30/day11/">Link do projektu</a>
-              </li>
-              <li>
-                <a class="link link--dark" href="https://github.com/EmilSroka/Course_Javascript-30">Link do repozytorium</a>
-              </li>
-            </ul>
-            <p class="card__description"><p class="card__description">Projekt znajduje się w repozytorium zawierającym zadania z kursu <a class="link link--dark" href="https://javascript30.com/">javascript30</a>.</p>
-          </li>
-        </ul>
+        <div class="projects__content">
+          <h2 class="primary-heading primary-heading--dark">Kilka wybranych projektów</h2>
+          <ul class="card-container">
+            <li class="card"> 
+              <a href="https://emilsroka.github.io/Project_Blog-template" class="card__img image-link image-link--before-f-tl image-link--after-br">
+                <span class="visually-hidden">Przejdź do projektu bloga</span>
+                <img 
+                  alt="" 
+                  src="./assets/static/Project1-min.jpg" 
+                  srcset="./assets/static/Project1-min.jpg 629w, 
+                          ./assets/static/Project1-norm.jpg 1277w,
+                          ./assets/static/Project1-max.jpg 1899w"
+                  sizes="(min-width: 992px) 25vw,
+                        (min-width: 768px) 40vw,
+                        80vw"
+                >
+              </a>
+              <h3 class="card__title">Szablon bloga</h3>
+              <p cass="card__description">Front-endowa część bloga wykanana w czystych językach HTML, CSS i JS. Szablon zawiera widok strony głównej oraz wpisu.</p>
+              <ul>
+                <li>
+                  <a class="link link--dark" href="https://emilsroka.github.io/Project_Blog-template">Link do projektu</a>
+                </li>
+                <li>
+                  <a class="link link--dark" href="https://github.com/EmilSroka/Project_Blog-template">Link do repozytorium</a>
+                </li>
+              </ul>
+            </li>
+            <!-- 2. card  -->
+            <li class="card"> 
+              <a href="https://emilsroka.github.io/Studies_Project_WDI/" class="card__img image-link image-link--after-tr">
+                <span class="visually-hidden">Przejdź do gry</span>
+                <img 
+                  alt="" 
+                  src="./assets/static/Project2-min.jpg" 
+                  srcset="./assets/static/Project2-min.jpg 629w, 
+                          ./assets/static/Project2-norm.jpg 1277w,
+                          ./assets/static/Project2-max.jpg 1915w"
+                  sizes="(min-width: 992px) 25vw,
+                        (min-width: 768px) 40vw,
+                        80vw"
+                >
+              </a>
+              <h3 class="card__title smaller-margin">Gra space invaders</h3>
+              <p cass="card__description">Gra wzorowana na space invaders wykonana w grudniu 2018 roku. Powstała jako projekt w ramach przedmiotu „Wstęp do informatki”. Projekt wykorzystuje element canvas.</p>
+              <ul>
+                <li>
+                  <a class="link link--dark" href="https://emilsroka.github.io/Studies_Project_WDI/">Link do projektu</a>
+                </li>
+                <li>
+                  <a class="link link--dark" href="https://github.com/EmilSroka/Studies_Project_WDI">Link do repozytorium</a>
+                </li>
+              </ul>
+            </li>
+            <!-- 3. card -->
+            <li class="card"> 
+              <a href="https://emilsroka.github.io/Exercises_Front-end/003%20masonry%20grid/my%20solution/" class="card__img image-link image-link--before-tl image-link--after-br">
+                <span class="visually-hidden">Przejdź do galerii</span>
+                <img 
+                  alt="" 
+                  src="./assets/static/Project3-min.jpg" 
+                  srcset=" ./assets/static/Project3-min.jpg 629w, 
+                          ./assets/static/Project3-norm.jpg 1277w,
+                          ./assets/static/Project3-max.jpg 1900w"
+                  sizes="(min-width: 992px) 25vw,
+                        (min-width: 768px) 40vw,
+                        80vw"
+                >
+              </a>
+              <h3 class="card__title">Galeria typu „masonry”</h3>
+              <p cass="card__description">Kod JavaScript (bez zewnętrznych bibliotek) z wykorzystaniem CSS Grid tworzy siatkę zdjęć. Strona dodatkowo pozwala powiększyć zdjęcie na pełny ekran. </p>
+              <ul>
+                <li>
+                  <a class="link link--dark" href="https://emilsroka.github.io/Exercises_Front-end/003%20masonry%20grid/my%20solution/">Link do projektu</a>
+                </li>
+                <li>
+                  <a class="link link--dark" href="https://github.com/EmilSroka/Exercises_Front-end">Link do repozytorium</a>
+                </li>
+              </ul>
+              <p class="card__description">Projekt znajduje się w repozytorium gromadzącego kilka mniejszych projektów powstałych podczas nauki różnych technologi.</p>
+            </li>
+            <!-- 4. card -->
+            <li class="card"> 
+              <a href="" class="card__img image-link image-link--before-f-tl image-link--after-tr">
+                <span class="visually-hidden">Przejdź do odtwarzacza.</span>
+                <img 
+                  alt="" 
+                  src="./assets/static/Project4-min.jpg" 
+                  srcset="./assets/static/Project4-min.jpg 629w, 
+                          ./assets/static/Project4-norm.jpg 1277w,
+                          ./assets/static/Project4-max.jpg 1920w"
+                  sizes="(min-width: 992px) 25vw,
+                        (min-width: 768px) 40vw,
+                        80vw"
+                >
+              </a>
+              <h3 class="card__title smaller-margin">Odtwarzacz filmów</h3>
+              <p cass="card__description">Prosty odtwarzacz filmów korzystający z elementu video. Menu korzysta z komponentu slider, zaprogramowanego na potrzeby tego projektu.</p>
+              <ul>
+                <li>
+                  <a class="link link--dark" href="https://emilsroka.github.io/Course_Javascript-30/day11/">Link do projektu</a>
+                </li>
+                <li>
+                  <a class="link link--dark" href="https://github.com/EmilSroka/Course_Javascript-30">Link do repozytorium</a>
+                </li>
+              </ul>
+              <p class="card__description"><p class="card__description">Projekt znajduje się w repozytorium zawierającym zadania z kursu <a class="link link--dark" href="https://javascript30.com/">javascript30</a>.</p>
+            </li>
+          </ul>
+        </div>
       </section>
       <section class="skills">
         <h2 class="primary-heading">Umiejętności</h2>
@@ -183,17 +185,19 @@
         </div>
       </section>
       <section class="education">
-        <h2 class="primary-heading primary-heading--dark">Wykształcenie</h2>
-        <p>Ponieważ informatyka jest moją pasją, wybrałem studia informatyczne na AGH. Obecnie jestem na drugim roku kierunku „informatyka” na wydziale EAIIB. Pierwszy rok ukończyłem z bardzo dobrymi wynikami, uzyskując średnią 4,56 w 5-stopniowej skali.</p>
-        <img inline src="../src/assets/inline/agh-brands.svg">
-        <p class="education__syllabus"><a href="https://syllabus.agh.edu.pl/2018-2019/pl/magnesite/study_plans/stacjonarne-informatyka--6" class="link link--dark">Link do syllabusa</a></p>
-        <p>Lista kilku projektów i repozytoriów wykonanych podczas pierwszych trzech semestrów:</p>
-        <ul>
-          <li><a href="https://github.com/EmilSroka/Studies_Java" class="link link--dark">Repozytorium</a> z przedmiotu „Programowanie obiektowe”</li>
-          <li><a href="https://github.com/EmilSroka/Studies_Prolog" class="link link--dark">Repozytorium</a> z przedmiotu „Bazy danych”</li>
-          <li><a href="https://github.com/EmilSroka/Studies_SQL" class="link link--dark">Repozytorium</a> z przedmiotu „Programowanie w logice”</li>
-          <li><a href="https://www.youtube.com/watch?v=dYHfpoer0L8" class="link link--dark">Animacja</a> wykonana w ramach przedmiotu „Podstawy grafiki komputerowej”</li>
-        </ul>
+        <div class="education__content">
+          <h2 class="primary-heading primary-heading--dark education__title">Wykształcenie</h2>
+          <p class="education__description">Ponieważ informatyka jest moją pasją, wybrałem studia informatyczne na AGH. Obecnie jestem na drugim roku kierunku „informatyka” na wydziale EAIIB. Pierwszy rok ukończyłem z bardzo dobrymi wynikami, uzyskując średnią 4,56 w 5-stopniowej skali.</p>
+          <img inline src="../src/assets/inline/agh-brands.svg">
+          <p class="education__syllabus"><a href="https://syllabus.agh.edu.pl/2018-2019/pl/magnesite/study_plans/stacjonarne-informatyka--6" class="link link--dark">Link do syllabusa</a></p>
+          <p class="education__projects-into">Lista kilku projektów i repozytoriów wykonanych podczas pierwszych trzech semestrów:</p>
+          <ul class="education__projects">
+            <li><a href="https://github.com/EmilSroka/Studies_Java" class="link link--dark">Repozytorium</a> z przedmiotu „Programowanie obiektowe”</li>
+            <li><a href="https://github.com/EmilSroka/Studies_Prolog" class="link link--dark">Repozytorium</a> z przedmiotu „Bazy danych”</li>
+            <li><a href="https://github.com/EmilSroka/Studies_SQL" class="link link--dark">Repozytorium</a> z przedmiotu „Programowanie w logice”</li>
+            <li><a href="https://www.youtube.com/watch?v=dYHfpoer0L8" class="link link--dark">Animacja</a> wykonana w ramach przedmiotu „Podstawy grafiki komputerowej”</li>
+          </ul>
+        </div>
       </section>
     </main>
   </body>

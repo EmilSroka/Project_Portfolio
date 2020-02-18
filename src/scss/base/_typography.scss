@@ -2,6 +2,10 @@ body {
   font-family: 'Lato', sans-serif;
   color: $color-lightest;
   font-size: $size-05;
+
+  @media screen and (min-width: $breakpoint-large){
+    font-size: $size-06;
+  }
 }
 
 P {
