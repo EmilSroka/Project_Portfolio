@@ -1,0 +1,64 @@
+.skills-list{
+  @media screen and (min-width: $breakpoint-medium){
+    @for $i from 1 through 10 {
+      .skill:nth-child(#{$i}) {
+        margin-left: 40px * ($i - 1);
+      }
+    }
+  }
+}
+
+.skill{
+  display: grid;
+  grid-template-columns: 60px 1fr;
+  grid-template-rows: 36px 24px  auto;
+  grid-template-areas: "skill_logo skill_title"
+                       "skill_logo skill_content"
+                       "... skill_content";
+  column-gap: $size-01;
+  
+
+  &__logo{
+    width: 60px;
+    height: 60px;
+    grid-area: skill_logo;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    & svg{
+      flex-basis: 40px;
+    }
+  }
+
+  &__title{
+    font-size: $size-font-500;
+    grid-area: skill_title;
+    justify-self: start;
+    align-self: center;
+  }
+
+  &__content{
+    grid-area: skill_content;
+  }
+
+  @media screen and (min-width: $breakpoint-large){
+    display: grid;
+    grid-template-columns: 100px 1fr;
+    grid-template-rows: 48px 52px auto;
+
+    &__title{
+      font-size: $size-font-600;
+    }
+
+    &__logo{
+      width: 100px;
+      height: 100px;
+      
+      & svg{
+        flex-basis: 80px;
+      }
+    }
+    
+  }
+}

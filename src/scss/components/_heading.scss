@@ -23,20 +23,3 @@
     font-size: $size-font-700;
   }
 }
-
-.secondary-heading {
-  display: table;
-  position: relative;
-  z-index: 1;
-  top: 0; left: 0;
-  margin: $size-04 auto;
-  font-size: $size-font-500;
-
-  &::before{
-    @include absolute-pseudoelement(-1);
-    top: -20%; right: -5%;
-    background-color: $color-base-600;
-    width: 20%;
-    height: 90%;
-  }
-}
