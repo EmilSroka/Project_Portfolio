@@ -3,7 +3,7 @@
 
   @media screen and (min-width: $breakpoint-medium){
     display: grid;
-    gap: $size-02;
+    gap: $size-08;
     grid-template-columns: 1fr 1fr;
   }
 }
