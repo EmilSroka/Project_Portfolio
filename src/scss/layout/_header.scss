@@ -32,12 +32,9 @@
     width: 100%;
     padding: $size-11 $size-06;
     display: grid;
-    //display: flex;
-    //flex-flow: row wrap;
     grid-template-columns: 1fr 1fr;
     gap: $size-14 $size-07 ;
-    //justify-content: space-around;
-    align-items: center;
+    align-items: start;
 
     &__introduction{
       grid-column: 1 / 2;

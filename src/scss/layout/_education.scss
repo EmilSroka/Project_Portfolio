@@ -47,10 +47,16 @@
 
       .education__projects-into{
         grid-area: ed_projects-into;
+        margin-bottom: 0;
       }
 
       .education__projects{
         grid-area: ed_projects;
+        margin-top: 0;
+
+        & li:first-child{
+          margin-top: 0;
+        }
       }
     }
   }
