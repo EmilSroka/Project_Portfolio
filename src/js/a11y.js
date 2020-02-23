@@ -1,25 +1,29 @@
-export function handleVisibleFocus(buttonSelector, defaultState){
-  button = document.querySelector(buttonSelector);
-  state = defaultState;
+const buttonText = {
+  enabled: 'Disable visible focus',
+  disabled: 'Enable visible focus'
+}
+let button;
+let isActive;
 
-  state ? enableVisibleFocus() : disableVisibleFocus();
+export default (selector, state=false) => {
+  button = document.querySelector(selector);
+  isActive = state;
+
+  isActive ? enableVisibleFocus() : disableVisibleFocus();
   button.addEventListener('click', toggleState);
 }
 
-let button;
-let state;
-
 function toggleState(){
-  state = !state;
-  state ? enableVisibleFocus() : disableVisibleFocus();
+  isActive = !isActive;
+  isActive ? enableVisibleFocus() : disableVisibleFocus();
 }
 
 function enableVisibleFocus(){
-  button.innerText = 'Wyłącz widoczny focus';
+  button.innerText = buttonText.enabled;
   document.body.classList.add('a11y');
 }
 
 function disableVisibleFocus(){
-  button.innerText = 'Włącz widoczny focus';
+  button.innerText = buttonText.disabled;
   document.body.classList.remove('a11y');
 }

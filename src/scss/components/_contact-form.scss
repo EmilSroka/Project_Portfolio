@@ -1,0 +1,38 @@
+.contact-form{
+
+  &__element{
+    margin-bottom: $size-03;
+  }
+
+  &__input{
+    width: 100%;
+    padding: $size-01;
+    padding-bottom: $size-01 - 3;
+    border: 3px hidden;
+    border-bottom: 3px solid $color-base-600;
+    margin-top: $offset-4;
+    background-color: $color-gray-600;
+    color: $color-lightest;
+    font: inherit;
+    transition: all $time-300 ease-in-out;
+  }
+
+  &__input--invalid{
+    border-bottom-color: $color-danger;
+  }
+
+  &__label{
+    display: block;
+    transition: all $time-100 ease-in-out;
+  }
+  
+  &__label--placeholder{
+    transform: translate(8px, 29px);
+    color: $color-gray-200;
+  }
+
+  &__submit{
+    display: block;
+    margin: $size-05 auto;
+  }
+}
