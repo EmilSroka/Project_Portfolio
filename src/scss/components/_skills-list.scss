@@ -1,10 +1,16 @@
 .skills-list{
   @media screen and (min-width: $breakpoint-medium){
-    @for $i from 1 through 10 {
-      .skill:nth-child(#{$i}) {
-        margin-left: 40px * ($i - 1);
-      }
-    }
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    // @for $i from 1 through 10 {
+    //   .skill:nth-child(#{$i}) {
+    //     margin-left: 40px * ($i - 1);
+    //   }
+    // }
+  }
+
+  @media screen and (min-width: $breakpoint-large){
+    grid-template-columns: repeat(3, 1fr);
   }
 }
 

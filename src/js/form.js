@@ -1,6 +1,7 @@
 const defaultSettings = {
   placeholderClassName: 'contact-form__label--placeholder',
   invalidFieldClassName: 'contact-form__input--invalid',
+  fieldSelector: '.contact-form__input',
   submitSelector: '.contact-form__submit',
   formSelector: '.contact-form',
   emailFieldSelector: '#cf-email',
@@ -9,72 +10,85 @@ const defaultSettings = {
 const emailRegex = /\S+@\S+\.\S+/;
 let placeholderClassName;
 let invalidFieldClassName;
+let fieldSelector;
 let submit;
 let form;
 let emailField;
 let messageField;
+let fields;
 
 export default ( settings = {} ) => {
   applySettings(settings);
   setListeners();
+  wait(100).then(initPlaceholders);
 }
 
 function applySettings(settings){
   settings = Object.assign(defaultSettings, settings);
   const { formSelector, submitSelector, emailFieldSelector, messageFieldSelector} = settings;
-  ({placeholderClassName, invalidFieldClassName} = settings);
+  ({placeholderClassName, invalidFieldClassName, fieldSelector} = settings);
 
   form = document.querySelector(formSelector);
   submit = document.querySelector(submitSelector);
   emailField = document.querySelector(emailFieldSelector);
   messageField = document.querySelector(messageFieldSelector);
+  fields = form.querySelectorAll(fieldSelector);
 }
 
 function setListeners() {
   form.addEventListener('focusin', handleField);
   form.addEventListener('focusout', handleField);
-  submit.addEventListener('click', handleSubmit)
+  form.addEventListener('animationstart', handleAutofill);
+  submit.addEventListener('click', handleSubmit);
+
+  document.addEventListener('DOMContentLoaded', () => {console.log("TTT")})
 }
 
 /* validation */
 function handleSubmit(event){
   if(!dataAreValid()){
     event.preventDefault();
+    displayValidityIndicator();
   }
 }
 
 function dataAreValid(){
-  let emailIsCorrect = validateField(emailField, field => emailRegex.test(field.value));
-  let messageIsNotEmpty = validateField(messageField, field => field.value.length > 0);
-  return emailIsCorrect && messageIsNotEmpty;
+  return hasValidMail(emailField) && !isEmpty(messageField);
 }
 
-function validateField(field, condition){
-  if(condition(field)){
-    return true;
-  } else {
-    field.classList.add(invalidFieldClassName);
-    return false;
+function displayValidityIndicator(){
+  if(! hasValidMail(emailField)){
+    emailField.classList.add(invalidFieldClassName);
   }
+  if(isEmpty(messageField)){
+    messageField.classList.add(invalidFieldClassName);
+  }
+}
+
+function hasValidMail(field){
+  return emailRegex.test(field.value);
+}
+
+function isEmpty(field){
+  return field.value.length === 0;
 }
 
 /* inputs and placeholder */
 function handleField({target, type}){
   if(target.tagName === 'INPUT' || target.tagName === 'TEXTAREA'){
-    handlePlaceholder(target, type);
-    handleValidityIndicator(target, type);
+    checkPlaceholder(target, type);
+    disableValidityIndicator(target);
   }
+  handleEdgeAutofill(target);
 }
 
-function handleValidityIndicator(target, type){
-  if(type === 'focusin'){
-    target.classList.remove(invalidFieldClassName);
-  }
+function disableValidityIndicator(target) {
+  target.classList.remove(invalidFieldClassName);
 }
 
-function handlePlaceholder(target, type){
-  if(type === 'focusout' && target.value.length === 0){
-    showPlaceholder(target);
+function checkPlaceholder(target, type){
+  if(type === 'focusout'){
+    handlePlaceholders(target);
   } else if(type === 'focusin'){
     hidePlaceholder(target);
   }
@@ -88,3 +102,37 @@ function hidePlaceholder(input){
   input.previousElementSibling.classList.remove(placeholderClassName);
 }
 
+function handleEdgeAutofill(field){
+  if(field.classList.contains('edge-autofilled')){
+    initPlaceholders();
+  }
+}
+
+function initPlaceholders(){
+  fields.forEach(field => {
+    handlePlaceholders(field);
+  });
+}
+
+function handlePlaceholders(field){
+  !isEmpty(field) ? hidePlaceholder(field) : showPlaceholder(field);
+}
+
+/* autofill */
+function handleAutofill({ target, animationName }){
+  console.log(target, animationName);
+  switch(animationName){
+    case 'onAutoFillStart':
+      hidePlaceholder(target); break;
+    case 'onAutoFillCancel':
+      handlePlaceholders(target);
+  }
+}
+
+function wait(ms){
+  return new Promise((resolve) => {
+    setTimeout(() => {
+      resolve();
+    },ms)
+  });
+}
