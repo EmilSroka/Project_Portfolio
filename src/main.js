@@ -9,7 +9,7 @@ window.addEventListener('DOMContentLoaded', (event) => {
   handleVisibleFocus('#visible-focus', false);
 
   /* animation */
-  // const bannerAnimation = BannerAnimation();
+  const bannerAnimation = BannerAnimation();
 
   /* cta */
   handleCta('.header__cta', 'contact');
@@ -18,8 +18,8 @@ window.addEventListener('DOMContentLoaded', (event) => {
   handleForm();
 
   /* resize */
-  // const mobileViewport = window.matchMedia( "(max-width: 48em)");
-  // mobileViewport.addListener(() => {
-  //   mobileViewport.matches ? bannerAnimation.pause() : bannerAnimation.play();
-  // });
+  const mobileViewport = window.matchMedia( "(max-width: 48em)");
+  mobileViewport.addListener(() => {
+    mobileViewport.matches ? bannerAnimation.pause() : bannerAnimation.play();
+  });
 });

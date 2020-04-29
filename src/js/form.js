@@ -40,8 +40,6 @@ function setListeners() {
   form.addEventListener('focusout', handleField);
   form.addEventListener('animationstart', handleAutofill);
   submit.addEventListener('click', handleSubmit);
-
-  document.addEventListener('DOMContentLoaded', () => {console.log("TTT")})
 }
 
 /* validation */
@@ -120,7 +118,6 @@ function handlePlaceholders(field){
 
 /* autofill */
 function handleAutofill({ target, animationName }){
-  console.log(target, animationName);
   switch(animationName){
     case 'onAutoFillStart':
       hidePlaceholder(target); break;
